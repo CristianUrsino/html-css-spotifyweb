@@ -25,23 +25,62 @@ a{
     color: unset;
     text-decoration: none;
 }
+li{
+    padding: 6px 0;
+}
+li span{
+    margin-left: 03px;
+}
+/* *****scroll-bar***** */
+::-webkit-scrollbar {
+    width: 12px;
+    padding: 2px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-white); 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-light-grey); 
+    border: 3px solid var(--color-white);
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-grey); 
+  }
 /* ******************************UTILITY****************************** */
 /* *****text***** */
 .text-white{
     color: var(--color-white);
+    font-weight: bold;
+}
+.inverted-colors{
+    color: var(--color-black);
+    background-color: var(--color-grey);
+    padding: 18px 10px;
 }
 /* *****button***** */
 .btn{
     background-color: unset;
-    color: white;
-    padding: 10px 20px
+    color: var(--color-white);
+    border:1px solid var(--color-white);
+    border-radius: 20px;
+    padding: 5px 30px;
+    display: inline-block;
 }
 /* *****flex****** */
 .d-flex{
     display: flex;
-    flex-flow: row nowrap;
 }
-
+.direction-column{
+    flex-direction: column;
+}
+.justify-between{
+    justify-content: space-between;
+}
+/* *****border radius*****/
+.circle{
+    border-radius: 50%;
+}
 /* ****************************STUTTURA************************  */
 .fixed{
     position: fixed;;
@@ -53,10 +92,10 @@ a{
     height: calc(100vh - 80px);
 }
 aside{
-    width: 200px;
+    width: 250px;
 }
 main{
-width: calc(100% - 200px);
+width: calc(100% - 250px);
 height: calc(100vh - 80px);
 overflow-y: auto;
 background-color: var(--color-dark-color);
@@ -71,10 +110,51 @@ header{
 }
 aside{
     background-color: var(--color-black);
+    overflow-y: auto;
 }
 footer{
     position: absolute;
     bottom: 0;
     background-color: var(--color-dark-grey);
     width: 100%;
+}
+/* **********************HEADER-ELEMENTS********************* */
+header .btn:first-child{
+    position: relative;
+    top: 50%;
+    right: 20px;
+    transform: translate(0,-50%);
+}
+/* **********************ASIDE ELEMENTS********************** */
+aside li{
+    padding-left: 12px;
+    transition: all 0.3s linear;
+}
+aside figure{
+    padding: 5px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+aside ul{
+    margin-bottom: 20px;
+}
+aside .user i{
+    background-color: var(--color-grey);
+    color: var(--color-white);
+    padding: 1px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+}
+.user{
+    padding-top: 20px;
+    margin: 0px 12px 12px 12px;
+    border-top: 1px solid var(--color-white);
+}
+aside .nav li:hover{
+    color: white;
+    font-weight: bold;
+    border-left: 5px solid var(--color-highlight);
 }
