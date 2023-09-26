@@ -25,3 +25,56 @@ a{
     color: unset;
     text-decoration: none;
 }
+/* ******************************UTILITY****************************** */
+/* *****text***** */
+.text-white{
+    color: var(--color-white);
+}
+/* *****button***** */
+.btn{
+    background-color: unset;
+    color: white;
+    padding: 10px 20px
+}
+/* *****flex****** */
+.d-flex{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+/* ****************************STUTTURA************************  */
+.fixed{
+    position: fixed;;
+    z-index: 10;
+    height: 80px;
+}
+.container{
+    width: 100%;
+    height: calc(100vh - 80px);
+}
+aside{
+    width: 200px;
+}
+main{
+width: calc(100% - 200px);
+height: calc(100vh - 80px);
+overflow-y: auto;
+background-color: var(--color-dark-color);
+}
+header{
+    background-color: rgba(0,0,0,0.5);
+    text-align: right;
+    width: calc(100% - 200px);
+}
+.main-content{
+    margin-top: 100px;
+}
+aside{
+    background-color: var(--color-black);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color-dark-grey);
+    width: 100%;
+}
