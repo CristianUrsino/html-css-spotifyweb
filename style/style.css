@@ -178,6 +178,9 @@ header .btn:first-child{
     transform: translate(0,-50%);
 }
 /* **********************ASIDE ELEMENTS********************** */
+.small-layout{
+    display: none;
+}
 aside li{
     transition: all 0.3s linear;
     padding-left: 12px;
@@ -202,6 +205,14 @@ aside .user i{
     margin: 0px 12px 12px 12px;
     border-top: 1px solid var(--color-white);
 }
+aside .normal-layout .user-img,
+aside .small-layout .user-img{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
 aside .nav li:hover{
     color: white;
     font-weight: bold;
@@ -220,6 +231,19 @@ main .nav a:hover span{
 footer figure{
     width: 50px;
 }
+#song-controller{
+    width: calc(100% - 400px)
+}
+#song-controller .icons-wrapper{
+    width: 95%;
+    max-width: 200px;
+    display: block;
+    margin-bottom: 10px;
+}
+#song-bar{
+    width: 95%;
+    max-width: 400px;
+}
 footer .bar{
     height: 1px;
     border: 3px solid ;
@@ -236,10 +260,8 @@ footer .bar.grey-bar{
     width: 65%;
     border-radius: 0 200px 200px 0;
 }   
-#bar-song-container{
-    width: 40vw;
-}
-#volume{
+#volume,
+#current-song{
     width: 200px;
     padding-right: 5px;
 }
@@ -253,5 +275,37 @@ footer .bar.grey-bar{
 @media screen and (max-width:768px) {
     .card{
         width: calc(100% / 2);
+    }
+    #song-controller{
+        width: calc(100% - 320px);
+    }
+    #current-song,
+    #volume{
+        width: 160px;
+    }
+}
+/* *************************MEDIA XS********************* */
+@media screen and (max-width:576px) {
+    aside{
+        width: 50px;
+    }
+    .small-layout{
+        display: block;
+        padding: 10px;
+    }
+    .small-layout figure{
+        width: 100%;
+        padding: 0;
+    }
+    .normal-layout{
+        display: none;
+    }
+    main,
+    header{
+        width: calc(100% - 50px);
+    }
+    aside .small-layout .user-img{
+        width: 30px;
+        height: 30px;
     }
 }
