@@ -171,11 +171,15 @@ footer{
     width: 100%;
 }
 /* **********************HEADER-ELEMENTS********************* */
-header .btn:first-child{
+header .btn{
     position: relative;
     top: 50%;
     right: 20px;
     transform: translate(0,-50%);
+    transition: all 0.5s;
+}
+header .btn:hover{
+    padding: 7px 35px;
 }
 /* **********************ASIDE ELEMENTS********************** */
 .small-layout{
@@ -184,6 +188,17 @@ header .btn:first-child{
 aside li{
     transition: all 0.3s linear;
     padding-left: 12px;
+}
+aside li *:hover{
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: bold;
+}
+aside li i.inverted-colors:hover{
+    background-color: var(--color-white);
+    color: var(--color-black);
+    cursor: pointer;
+    font-weight: bold;
 }
 aside figure{
     padding: 15px;
@@ -214,13 +229,18 @@ aside .small-layout .user-img{
     vertical-align: middle;
 }
 aside .nav li:hover{
-    color: white;
-    font-weight: bold;
     border-left: 5px solid var(--color-highlight);
 }
 /* ***********************MAIN ELEMENTS*********************** */
 main .nav a:hover span{
     border-bottom: 1px solid white;
+}
+main .nav li *:hover{
+    color: var(--color-white);
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, transparent 20%, white 50%, transparent 80%) 100% 1;
 }
 .card{
     width: calc(100% / 6);
