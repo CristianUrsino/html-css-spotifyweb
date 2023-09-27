@@ -108,6 +108,9 @@ justify-content: center;/*useless???*/
     align-content: flex-end;
     align-items: flex-end;
 }
+.wrap{
+    flex-wrap: wrap;
+}
 /* *****border radius*****/
 .circle{
     border-radius: 50%;
@@ -236,8 +239,19 @@ footer .bar.grey-bar{
 #bar-song-container{
     width: 40vw;
 }
-#current-song,
 #volume{
     width: 200px;
     padding-right: 5px;
+}
+/* ************************MEDIA MD********************** */
+@media screen and (max-width:992px) {
+    .card{
+        width: calc(100% / 4);
+    }
+}
+/* ************************MEDIA S*********************** */
+@media screen and (max-width:768px) {
+    .card{
+        width: calc(100% / 2);
+    }
 }
