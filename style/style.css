@@ -235,6 +235,9 @@ aside .nav li:hover{
 main .nav a:hover span{
     border-bottom: 1px solid white;
 }
+main .nav li *{
+    transition: all 0.3s;
+}
 main .nav li *:hover{
     color: var(--color-white);
     cursor: pointer;
@@ -276,6 +279,20 @@ main .nav li *:hover{
 footer figure{
     width: 50px;
 }
+footer i{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+#current-song i:hover,
+#volume i:hover{
+    color: var(--color-white);
+}
+#current-song a:hover{
+    color: var(--color-white);
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}
 #song-controller{
     width: calc(100% - 400px)
 }
@@ -284,6 +301,12 @@ footer figure{
     max-width: 200px;
     display: block;
     margin-bottom: 10px;
+}
+.icons-wrapper i:hover{
+    font-size: 1.5em;
+}
+.icons-wrapper i#play-icon:hover{
+    font-size: 2.2em;
 }
 #song-bar{
     width: 95%;
@@ -300,11 +323,24 @@ footer .bar.white-bar{
     width: 15%;
     border-radius: 200px 0 0 200px;
 }
+footer .bar.white-bar:hover{
+    border-color: var(--color-highlight);
+}
+footer .bar.white-bar:hover+.bar.circle,
+footer .bar.circle:hover{
+    display: block;
+}
 footer .bar.grey-bar{
     border-color: var(--color-grey);
     width: 65%;
     border-radius: 0 200px 200px 0;
 }   
+footer .bar.circle{
+    display: none;
+    border: 6px solid var(--color-white);
+    position: relative;
+    top: 2px;
+}
 #volume,
 #current-song{
     width: 200px;
