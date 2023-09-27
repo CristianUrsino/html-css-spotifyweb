@@ -35,6 +35,16 @@ li span{
 img{
     width: 100%;
 }
+h2{
+    color: white;
+    font-size: 1.6em;
+    line-height: 1.8em;
+}
+h3{
+    color: white;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
 /* *****scroll-bar***** */
 ::-webkit-scrollbar {
     width: 12px;
@@ -56,6 +66,9 @@ img{
 .text-white{
     color: var(--color-white);
     font-weight: bold;
+}
+.text-center{
+    text-align: center;/*useless???*/
 }
 .inverted-colors{
     color: var(--color-black);
@@ -91,9 +104,16 @@ justify-content: center;/*useless???*/
     align-content: center;
     align-items: center;
 }
+.align-start{
+    align-content: flex-end;
+    align-items: flex-end;
+}
 /* *****border radius*****/
 .circle{
     border-radius: 50%;
+}
+figure.circle{
+    overflow: hidden;
 }
 /* *****margin***** */
 .mt-20{
@@ -183,6 +203,15 @@ aside .nav li:hover{
     color: white;
     font-weight: bold;
     border-left: 5px solid var(--color-highlight);
+}
+/* ***********************MAIN ELEMENTS*********************** */
+main .nav a:hover span{
+    border-bottom: 1px solid white;
+}
+.card{
+    width: calc(100% / 6);
+    padding: 10px;
+    text-align: center;
 }
 /* ***********************FOOTER ELEMENTS******************** */
 footer figure{
