@@ -68,7 +68,7 @@ h3{
     font-weight: bold;
 }
 .text-center{
-    text-align: center;/*useless???*/
+    text-align: center;
 }
 .inverted-colors{
     color: var(--color-black);
@@ -95,7 +95,7 @@ h3{
     justify-content: space-between;
 }
 .justify-center{
-justify-content: center;/*useless???*/
+justify-content: center;
 }
 .justify-end{
     justify-content:flex-end;
@@ -226,6 +226,31 @@ main .nav a:hover span{
     width: calc(100% / 6);
     padding: 10px;
     text-align: center;
+}
+.card *{
+    cursor: pointer;
+}
+.card-icon{
+    opacity: 0;
+    font-size: 4em;
+    color: var(--color-white);
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+    transition: all 0.5s;
+}
+.card-img{
+    position: relative;
+}
+.card-img img{
+    transition: all 0.5s;
+}
+.card:hover .card-img img{
+    filter: opacity(0.6);
+}
+.card:hover .card-icon{
+    opacity: 1;
 }
 /* ***********************FOOTER ELEMENTS******************** */
 footer figure{
