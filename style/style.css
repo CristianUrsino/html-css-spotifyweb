@@ -143,9 +143,6 @@ figure.circle{
     width: 100%;
     height: calc(100vh - 80px);
 }
-aside{
-    width: 250px;
-}
 main{
 width: calc(100% - 250px);
 height: calc(100vh - 80px);
@@ -161,8 +158,9 @@ header{
     margin-top: 100px;
 }
 aside{
+    width: 250px;
     background-color: var(--color-black);
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 footer{
     position: absolute;
@@ -185,6 +183,9 @@ header .btn:hover{
 .small-layout{
     display: none;
 }
+#aside-top{
+    height: calc(100vh - 200px);
+}
 aside li{
     transition: all 0.3s linear;
     padding-left: 12px;
@@ -204,6 +205,9 @@ aside figure{
     padding: 15px;
     width: 70%;
 }
+#playlist{
+    overflow-y: auto;
+}
 aside .user i{
     background-color: var(--color-grey);
     color: var(--color-white);
@@ -219,6 +223,12 @@ aside .user i{
     padding-top: 10px;
     margin: 0px 12px 12px 12px;
     border-top: 1px solid var(--color-white);
+}
+#aside-bottom{
+    width: 250px;
+    background-color: var(--color-black);
+    bottom: 80px;
+    height: 100px;
 }
 aside .normal-layout .user-img,
 aside .small-layout .user-img{
