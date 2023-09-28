@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>spotify</title>
+
+    <link rel="stylesheet" href="../style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/42b6da10cf.js" crossorigin="anonymous"></script>
+
+</head>
+<body id="album">
+    <div class="wrapper">
+
+        <div class="debug container d-flex normal-leyout">
+            <!-- -------------------ASIDE------------------ -->
+            <aside class="debug">
+                <!-- pt 1 -->
+                <div class="debug small-layout">
+                    <!-- nav small  -->
+                    <a href="../index.html"><figure><img src="../img/logo-small.svg" alt="logo"></figure></a>
+                    <figure><img src="../img/home.svg" alt="logo"></figure>
+                    <figure><img src="../img/search.svg" alt="logo"></figure>
+                    <figure><img src="../img/libreria.svg" alt="logo"></figure>
+                </div>
+                <div  id="aside-top" class="debug normal-layout">
+                    <!-- nav normal -->
+                    <a href="../index.html"><figure class="debug"><img src="../img/logo.svg" alt="logo"></figure></a>
+                    <ul class="nav debug">
+                        <li>
+                            <i class="fa-solid fa-house fa-lg"></i>
+                            <a>lorem</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-house fa-lg"></i>
+                            <a>lorem</a>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-house fa-lg"></i>
+                            <a>Lorem, ipsum.</a>
+                        </li>
+                    </ul>
+                    <!-- list -->
+                    <ul id="playlist" class="debug mt-20">
+                        <li class="debug text-white">LOREM</li>
+                        <li>
+                            <i class="fa-solid fa-plus fa-xl inverted-colors"></i>
+                            <span><a>Lorem, ipsum.</a></span>
+                        </li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                        <li><a>Lorem, ipsum.</a></li>
+                    </ul>
+                </div>
+                <!-- pt 2  -->
+                <!-- user small  -->
+                <div class="small-layout fixed aside-bottom">
+                    <div class="text-center mb-20"><i class="fa-regular fa-circle-down"></i></div>
+                    <figure class="user-img inverted-colors circle"><img src="../img/profile.svg" alt="profile"></figure>
+                </div>
+                <!-- user normal  -->
+                <div class="debug normal-layout fixed aside-bottom">
+                    <ul>
+                        <li>
+                            <i class="fa-regular fa-circle-down"></i>
+                            <li><a>Lorem, ipsum.</a></li>
+                        </li>
+                    </ul>
+                    <!-- user  -->
+                    <div class="debug user text-white">
+                        <figure class="user-img inverted-colors circle"><img src="../img/profile.svg" alt="profile"></figure>
+                        <span>Nome Cognome</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="debug">
+                <!-- -----------------HEADER--------------------- -->
+                <header class="debug fixed ">
+                        <a href="#" class="btn debug">Lorem, ipsum.</a>
+                </header>
+                <!-- -------------------MAIN-------------------- -->
+                <div class="main-content">
+                    <!-- ------------FIRST SECTION------------- -->
+                    <section class="debug">
+                        <div class="debug d-flex align-end mb-20">
+                            <figure class="mr-20 mb-20"><img src="../img/aquietplace.jpeg" alt="album"></figure>
+                            <div>
+                                <div class="text-white">lorem</div>
+                                <h1 class="mb-20">TITOLO</h1>
+                                <div class="mb-20 d-flex align-center">
+                                    <figure class="mini circle"><img src="../img/aquietplace.jpeg" alt="artista"></figure>
+                                    <div><span class="text-white"> ipsum dolor sit amet.</span> 31 minuti</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+            </main>
+
+        </div>
+        <!-- -------------------------FOOOTER------------------- -->
+        <footer class="debug fixed d-flex justify-between align-center">
+            <!-- current song -->
+            <ul id="current-song" class="debug d-flex align-center">
+                <li>
+                    <figure class="mx-12"><img src="../img/mixdaily.jpeg" alt="actual-song"></figure>
+                </li>
+                <li class="mr-20">
+                        <div class="text-white">lorem</div>
+                        <div><a>Lorem, ipsum.</a></div>
+                </li>
+                <li>
+                    <i class="fa-regular fa-heart fa-lg"></i>
+                    <div><i class="fa-regular fa-heart fa-lg"></i></div>
+                </li>
+            </ul>
+            <!-- song controller  -->
+            <div id="song-controller" class="debug d-flex direction-column align-center text-white">
+                <!-- icons -->
+                <div class="debug icons-wrapper">
+                    <ul>
+                        <li class="d-flex justify-between ">
+                            <i class="fa-regular fa-heart fa-lg"></i>
+                            <i class="fa-regular fa-heart fa-lg "></i>
+                            <i id="play-icon" class="fa-regular fa-heart fa-2xl mx-12"></i>
+                            <i class="fa-regular fa-heart fa-lg "></i>
+                            <i class="fa-regular fa-heart fa-lg"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- bar -->
+                <div id="song-bar-container" class="debug d-flex justify-center">
+                    <div>0.22</div>
+                    <div class="song-bar d-flex justify-center mx-12">
+                        <div class="bar white-bar"></div>
+                        <div class="bar circle"></div>
+                        <div class="bar grey-bar"></div>
+                    </div>
+                    <div>4.32</div>
+                </div>
+            </div>
+            <!-- volume controller  -->
+            <div id="volume" class="debug d-flex justify-end">
+                <div><i class="mx-12 fa-regular fa-heart fa-lg"></i></div>
+                <div><i class="fa-regular fa-heart fa-lg"></i></div>
+                <div><i class="mx-12 fa-regular fa-heart fa-lg"></i></div>
+                <div class="song-bar d-flex justify-center">
+                    <div class="bar white-bar"></div>
+                    <div class="bar circle"></div>
+                    <div class="bar grey-bar mr-20"></div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
