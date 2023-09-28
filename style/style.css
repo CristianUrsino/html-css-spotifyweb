@@ -15,7 +15,7 @@
     list-style: none;
 }
 .debug{
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -205,7 +205,8 @@ aside figure{
     padding: 15px;
     width: 70%;
 }
-#playlist{
+#playlist {
+    height: 200px;
     overflow-y: auto;
 }
 aside .user i{
@@ -318,9 +319,12 @@ footer i{
 .icons-wrapper i#play-icon:hover{
     font-size: 2.2em;
 }
-#song-bar{
+#song-bar-container{
     width: 95%;
     max-width: 400px;
+}
+.song-bar{
+    width: 90%;
 }
 footer .bar{
     height: 1px;
@@ -333,12 +337,12 @@ footer .bar.white-bar{
     width: 15%;
     border-radius: 200px 0 0 200px;
 }
-footer .bar.white-bar:hover{
+.song-bar:hover .bar.white-bar{
     border-color: var(--color-highlight);
 }
-footer .bar.white-bar:hover+.bar.circle,
-footer .bar.circle:hover{
+.song-bar:hover .bar.circle{
     display: block;
+    top:3px;
 }
 footer .bar.grey-bar{
     border-color: var(--color-grey);
@@ -398,5 +402,16 @@ footer .bar.circle{
     aside .small-layout .user-img{
         width: 30px;
         height: 30px;
+    }
+}
+@media screen and (max-height:300px){
+    header{
+        display: none;
+    }
+    .main-content{
+        margin-top: 20px;
+    }
+    #aside-bottom{
+        display: none;
     }
 }
