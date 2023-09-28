@@ -127,7 +127,11 @@ justify-content: center;
 figure.circle{
     overflow: hidden;
 }
-/* *****margin***** */
+/* *****margin and padding***** */
+.py-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 .mt-20{
     margin-top: 20px;
 }
@@ -141,7 +145,10 @@ figure.circle{
 .mr-20{
     margin-right: 20px;
 }
-/* *****padding***** */
+/* *****border***** */
+.border-b{
+    border-bottom: 1px solid #9ea4a7;
+}
 /* ****************************STUTTURA************************  */
 .fixed{
     position: fixed;;
@@ -303,10 +310,9 @@ main .nav li *:hover{
 #album main{
     background: rgb(20,25,34);
     background: linear-gradient(0deg, rgba(20,25,34,1) 38%, rgba(241,117,106,1) 100%);
-    min-height: 190vh;
 }
 #album .main-content section>div{
-padding-left: 25px;
+    padding:0 25px;
 }
 #album .main-content figure{
     width: 220px;
@@ -315,6 +321,68 @@ padding-left: 25px;
 #album .main-content .mini{
     width: 2em;
     margin-right: 5px;
+}
+#album-container .big.circle{
+    background-color: #1fdf64;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    color: #000;
+    text-align: center;
+    line-height: 50px;
+    padding-left: 5px;
+    font-size: 2em;
+}
+#album-container .fa-2xl{
+    font-size: 2.5em;
+}
+#album-container{
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#album-container .song{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 3px;
+}
+#album-container .song:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+}
+#album-container .number{
+    width: 50px;
+    cursor: pointer;
+}
+#album-container .title{
+    width: calc(100% - 150px);
+}
+#album-container .time{
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+}
+#album-container .number span:first-child{
+    display: none;
+}
+#album-container .song:hover .number span:first-child{
+    display: block;
+}
+#album-container .song:hover .number span:last-child{
+    display: none;
+}
+#album-container .song a:hover{
+    text-decoration: underline;
+}
+#album-container .time div{
+    display: none;
+}
+#album-container .song:hover .time div{
+    display: block;
+    color:#717171
+}
+#album-container .song .time div:hover{
+    display: block;
+    color:white
 }
 /* ***********************FOOTER ELEMENTS******************** */
 footer figure{
