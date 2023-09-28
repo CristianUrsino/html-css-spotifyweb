@@ -123,8 +123,8 @@ justify-content: center;
 .gap{
     gap: 20px;
 }
-.gap-100{
-    gap: 100px;
+.gap-70{
+    gap: 70px;
 }
 /* *****border radius*****/
 .circle{
@@ -201,6 +201,9 @@ header .btn{
 header .btn:hover{
     padding: 7px 35px;
 }
+#album header{
+    background-color: rgba(0,0,0,0.9);
+}
 /* **********************ASIDE ELEMENTS********************** */
 .small-layout{
     display: none;
@@ -226,6 +229,12 @@ aside li i.inverted-colors:hover{
 aside figure{
     padding: 15px;
     width: 70%;
+}
+aside figure.mini{
+    display: inline-block;
+    width: 2em;
+    padding: 0;
+    vertical-align: middle;
 }
 #playlist {
     height: 200px;
@@ -522,10 +531,28 @@ footer .bar.circle{
     width: 200px;
     padding-right: 5px;
 }
+/* **********************MEDIA LG************************ */
+@media screen and (max-width:1100PX) {
+    #album .card{
+        width: calc(100% / 4 - 20px);
+    }
+    #album .card:last-child{
+        display: none;
+    }
+    #info-social{
+        display: block;
+    }
+}
 /* ************************MEDIA MD********************** */
 @media screen and (max-width:992px) {
     .card{
         width: calc(100% / 4);
+    }
+    #album .card{
+        width: calc((100% / 3 - 20px));
+    }
+    #album .card:nth-last-child(2){
+        display: none;
     }
 }
 /* ************************MEDIA S*********************** */
@@ -539,6 +566,18 @@ footer .bar.circle{
     #current-song,
     #volume{
         width: 160px;
+    }
+    #album .card{
+        width: calc((100% / 2 - 20px));
+    }
+    #album .card:nth-last-child(3){
+        display: none;
+    }
+    #album .main-content section>div:first-of-type{
+        display: block;
+    }
+    #album .main-content section>div:first-child figure:not(.mini){
+        margin: 0 auto;
     }
 }
 /* *************************MEDIA XS********************* */
@@ -578,8 +617,12 @@ footer .bar.circle{
     #song-controller{
         width: calc(100% - 160px);
     }
-    .card{
+    .card,
+    #album .card{
         width: 100%;
+    }
+    #album .card:nth-last-child(4){
+        display: none;
     }
     main{
         text-align: center;
